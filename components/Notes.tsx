@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 
 const Notes: React.FC = () => {
   const [note, setNote] = useState("");
-
+  //this is note change
   useEffect(() => {
     const savedNote = localStorage.getItem("note");
     if (savedNote) {
