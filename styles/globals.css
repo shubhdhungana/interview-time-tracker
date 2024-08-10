@@ -5,36 +5,92 @@ body {
     "Helvetica Neue", Arial, sans-serif;
   background-color: #f0f4f8;
   color: #333;
+  line-height: 1.6;
 }
 
 * {
   box-sizing: border-box;
 }
 
+#start {
+  background-color: green;
+
+}
+#reset {
+  background-color: red;
+
+}
 button {
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 5px;
   border: none;
   border-radius: 4px;
   background-color: #0070f3;
   color: #fff;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
 
   &:hover {
     background-color: #005bb5;
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.3);
   }
 }
+
 
 textarea,
 input {
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
+  padding: 12px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0;
+  line-height: 1.2;
+  color: #333;
 }
 
 h2 {
   color: #0070f3;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #005bb5;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
