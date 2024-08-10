@@ -1,0 +1,60 @@
+$primary-color: #0070f3;
+$secondary-color: #005bb5;
+$background-color: #f0f4f8;
+$white-color: #fff;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease-in-out;
+$warning-color: #ffeb3b;
+$danger-color: #f44336;
+
+.countdown {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  transition: $transition;
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  &__time {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: none;
+      background-color: $primary-color;
+      color: $white-color;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.warning {
+  background-color: $warning-color !important;
+}
+
+.danger {
+  background-color: $danger-color !important;
+}

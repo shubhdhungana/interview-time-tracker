@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 
 interface Todo {
   id: number;
@@ -51,7 +51,7 @@ const TodoList: React.FC = () => {
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Add a new task"
       />
-      <button onClick={handleAddTodo}>Add</button>
+      <button id="start" onClick={handleAddTodo}>Add</button>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
@@ -63,7 +63,7 @@ const TodoList: React.FC = () => {
             >
               {todo.text}
             </span>
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <button id="reset" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
             <button onClick={() => handleToggleTodo(todo.id)}>
               {todo.completed ? "Undo" : "Complete"}
             </button>
