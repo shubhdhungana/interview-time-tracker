@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import styles from "./Countdown.module.scss";
+import styles from "./CountDown.module.scss";
 
 interface CountdownProps {
   initialTime?: number; // Optional: default time in seconds
