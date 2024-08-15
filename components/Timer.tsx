@@ -10,7 +10,7 @@ const Timer: React.FC = () => {
     if (isRunning) {
       timer = setInterval(() => {
         setTime((prevTime) => prevTime + 1);
-      }, 1000);
+      }, 10000);
     }
     return () => clearInterval(timer);
   }, [isRunning]);

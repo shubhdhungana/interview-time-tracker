@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
+import { toast } from "react-toastify";
 
 interface Todo {
   id: number;
@@ -19,7 +20,14 @@ const TodoList: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    if (todos.length > 0) {
+      const timer = setTimeout(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+        toast.success("Todos saved!");
+      }, 10000); // 15 seconds
+
+      return () => clearTimeout(timer);
+    }
   }, [todos]);
 
   const handleAddTodo = () => {
@@ -51,7 +59,9 @@ const TodoList: React.FC = () => {
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Add a new task"
       />
-      <button id="start" onClick={handleAddTodo}>Add</button>
+      <button id="start" onClick={handleAddTodo}>
+        Add
+      </button>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
@@ -63,7 +73,9 @@ const TodoList: React.FC = () => {
             >
               {todo.text}
             </span>
-            <button id="reset" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <button id="reset" onClick={() => handleDeleteTodo(todo.id)}>
+              Delete
+            </button>
             <button onClick={() => handleToggleTodo(todo.id)}>
               {todo.completed ? "Undo" : "Complete"}
             </button>

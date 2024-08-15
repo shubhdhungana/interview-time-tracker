@@ -1,8 +1,70 @@
-$primary-color: #0070f3;
-$secondary-color: #005bb5;
-$background-color: #f0f4f8;
-$white-color: #fff;
-$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+// $primary-color: #0070f3;
+// $secondary-color: #005bb5;
+// $background-color: #f0f4f8;
+// $white-color: #fff;
+// $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+// $transition: all 0.3s ease-in-out;
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 100vh;
+//   padding: 20px;
+//   background-color: $background-color;
+// }
+
+// .mainSection,
+// .bottomSection {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 20px 0;
+
+//   @media (max-width: 768px) {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
+
+// .section {
+//   flex: 1;
+//   background-color: $white-color;
+//   box-shadow: $box-shadow;
+//   border-radius: 8px;
+//   padding: 20px;
+//   margin: 10px;
+//   transition: $transition;
+
+//   &:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+//   }
+
+//   @media (max-width: 768px) {
+//     width: 90%;
+//   }
+// }
+
+// .mainSection > .section,
+// .bottomSection > .section {
+//   &:not(:last-child) {
+//     margin-right: 20px;
+
+//     @media (max-width: 768px) {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+$primary-color: #3b82f6; /* Vibrant Blue */
+$secondary-color: #2563eb; /* Darker Blue */
+$background-color: #1e293b; /* Dark Blue Gray for background */
+$white-color: #f8fafc; /* Off-white for contrast */
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
 $transition: all 0.3s ease-in-out;
 
 .container {
@@ -34,14 +96,14 @@ $transition: all 0.3s ease-in-out;
   flex: 1;
   background-color: $white-color;
   box-shadow: $box-shadow;
-  border-radius: 8px;
+  border-radius: 10px; /* Increased border-radius for a softer, more modern look */
   padding: 20px;
   margin: 10px;
   transition: $transition;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for depth */
   }
 
   @media (max-width: 768px) {
