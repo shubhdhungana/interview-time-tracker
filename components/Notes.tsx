@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
+import { toast } from "react-toastify";
 
 const Notes: React.FC = () => {
   const [note, setNote] = useState("");
@@ -12,7 +13,12 @@ const Notes: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("note", note);
+    const timer = setTimeout(() => {
+      localStorage.setItem("note", note);
+      toast.success("Note saved!");
+    }, 10000); // 15 seconds
+
+    return () => clearTimeout(timer);
   }, [note]);
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {

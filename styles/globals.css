@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -14,11 +14,9 @@ body {
 
 #start {
   background-color: green;
-
 }
 #reset {
   background-color: red;
-
 }
 button {
   cursor: pointer;
@@ -41,7 +39,6 @@ button {
     box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.3);
   }
 }
-
 
 textarea,
 input {
@@ -75,6 +72,104 @@ a {
 
   &:hover {
     color: #005bb5;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #1e293b; /* Dark Blue Gray background for modern feel */
+  color: #e2e8f0; /* Light Gray for text to contrast against the dark background */
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#start {
+  background-color: #10b981; /* Modern Emerald Green for start button */
+}
+
+#reset {
+  background-color: #ef4444; /* Bright Red for reset button */
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px; /* Slightly increased border-radius for a more modern look */
+  background-color: #3b82f6; /* Vibrant Blue for primary buttons */
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #2563eb; /* Darker Blue on hover */
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4); /* Stronger focus shadow */
+  }
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #334155; /* Darker Gray for input border */
+  border-radius: 6px;
+  background-color: #0f172a; /* Very Dark Blue for input background */
+  color: #e2e8f0; /* Light Gray for input text */
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0;
+  line-height: 1.2;
+  color: #e2e8f0; /* Light Gray for headings */
+}
+
+h2 {
+  color: #3b82f6; /* Blue for subheadings */
+}
+
+a {
+  color: #3b82f6; /* Blue for links */
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #2563eb; /* Darker Blue on hover */
   }
 }
 
