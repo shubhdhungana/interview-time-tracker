@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./CountDown.module.scss";
-
+//import 
 interface CountdownProps {
   initialTime?: number; // Optional: default time in seconds
 }
@@ -81,6 +81,7 @@ const Countdown: React.FC<CountdownProps> = ({ initialTime = 300 }) => {
           disabled={isActive && !isPaused}
         >
           Start
+          
         </button>
         <button onClick={handlePause} disabled={!isActive || isPaused}>
           Pause
